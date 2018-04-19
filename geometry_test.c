@@ -168,6 +168,14 @@ START_TEST(test_2d_area_triangle)
     c.x = 50;
     c.y = 25;
     ck_assert(coord_2d_area_triangle(&a, &b, &c) == 222.5);
+
+    a.x = -5;
+    a.y = -3;
+    b.x = -5;
+    b.y = -10;
+    c.x = -8;
+    c.y = -3;
+    ck_assert(coord_2d_area_triangle(&a, &b, &c) == 10.5);
 }
 END_TEST
 
