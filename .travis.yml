@@ -1,3 +1,4 @@
 language: c
+sudo: required
 install: make dep
 target: all
