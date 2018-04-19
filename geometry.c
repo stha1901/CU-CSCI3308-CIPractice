@@ -14,6 +14,7 @@
 #include <errno.h>
 
 #include "geometry.h"
+#include "math.h"
 
 #define FUZZY_EQ 0.01
 
@@ -76,5 +77,5 @@ double coord_2d_area_triangle(const coord_2d_t* a, const coord_2d_t* b, const co
     part2 = b->x*(c->y-a->y);
     part3 = c->x*(a->y-b->y);
     area = (part1+part2+part3)/2;
-    return area;
+    return fabs(area);
 }
